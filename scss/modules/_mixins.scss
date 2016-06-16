@@ -4,3 +4,93 @@
     width:30%;
     padding:15px;
   }
+
+  @mixin tablet {
+  @media (min-width: 551px) and (max-width: 1023px) {
+    .contact_form {
+      left: -350px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+.nav-trigger{
+  display:block;
+}
+label[for="nav-trigger"] {
+  display:block;
+}
+.wrapper{
+  width:100%;
+  height:100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section_all{    height:100vh;}
+.section1, .section2, .section3{
+  width:28%;
+}
+    }
+  }
+
+  @mixin phone {
+    @media (max-width: 550px){
+      .contact_form {
+        left: -350px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+.nav-trigger{
+  display:block;
+}
+label[for="nav-trigger"] {
+  display:block;
+}
+.wrapper{
+  width:100%;
+  height:auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section_all{
+  flex-direction: column;    height: auto;
+}
+.section1, .section2, .section3{
+  width:80%;
+}
+      }
+    }
+
+    @mixin desktop {
+      @media (min-width:1024px) {
+        .contact_form {
+          left: 0px;
+          position: relative;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+  .nav-trigger{
+    display:none;
+  }
+  label[for="nav-trigger"] {
+    display:none;
+  }
+  .wrapper{
+    width:80%;
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .section_all{
+    flex-direction: row;height:100vh;
+  }
+  .section1, .section2, .section3{
+    width:25%;
+  }
+        }
+      }
