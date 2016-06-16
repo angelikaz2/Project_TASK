@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content=''>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="contact_form">
+    <div class="logo">
+      <img src="images/logo_manager2.png">
+    </div>
+    <div class="contact_form_inner">
+      <input type="text" id="name" placeholder="Task name" name="name" />
+      </input>
+        <input type="text" id="description" placeholder="Description" name="description"/>
+        </input>
+        <input type="text" id="datepicker" placeholder="Date (dd/mm/yy)" name="datepicker" />
+    <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+      <button class="btn">
+        Add Task
+      </button>
+      <br>
+      <div class="counter"><h3>Total:</h3>
+      <div class="to_do_count"><span>to do </span><span class="inner_no"></span></div>
+      <div class="progress_count"><span>in progress </span><span class="inner_no"></span></div>
+      </div>
+    </div>
+  </div>
+<div class="wrapper">
+
+<section class="section_all">
+
+  <section class="section1">
+    <div class="section1_head">
+    <h1>
+      to do
+    </h1>
+  </div>
+  </section>
+
+  <section class="section2">
+    <div class="section2_head">
+      <h1>
+        in progress
+      </h1>
+    </div>
+  </section>
+
+  <section class="section3">
+    <div class="section3_head">
+    <h1>
+      done
+    </h1>
+  </div>
+
+  </section>
+</section>
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script   src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"   integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo="   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="js/app.js"></script>
+
+</body>
+</html>
