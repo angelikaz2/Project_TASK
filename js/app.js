@@ -20,7 +20,7 @@ function accordion_set(){
     var descriptionInner = $("#description").val();
     var priorityInner = $('#priority option:selected').val();
     var dateInner = $('#datepicker').val();
-    $(".section1").append("<div class='task'><h3><span>" + inputInner + "</span><i class='fa fa-trash-o' aria-hidden='true'></i><i class='fa fa-caret-square-o-down' aria-hidden='true'></i></h3><div><span>" + descriptionInner+"</span><br><span>Priority: " + priorityInner + "</span><br><span>Date: "+dateInner+"</span></div></div>");
+    $(".section1").append("<div class='task'><h3><span>" + inputInner + "</span><i class='fa fa-trash-o' aria-hidden='true'></i><i class='fa fa-caret-square-o-down' aria-hidden='true'></i></h3><div><span><b>Description:</b> " + descriptionInner+"</span><br><span><b>Priority:</b> " + priorityInner + "</span><br><span><b>Date:</b> "+dateInner+"</span></div></div>");
     $(".task").draggable({
       revert:"invalid"
     });
@@ -35,7 +35,7 @@ function accordion_set(){
     });
 
     $('body').on('click', '.fa.fa-trash-o', function() {
-    $(this).parent().parent().hide( "highlight", {color: 'red'},500 , function() {
+    $(this).parent().parent().hide( "highlight", {color: '#8b0c06;'},500 , function() {
     $(this).remove();});
 });
 $('body').on('click', '.fa-caret-square-o-down', function() {
@@ -60,3 +60,37 @@ $(this).parent().parent().find("div").slideToggle();
     });
 
 });
+
+
+//testowe
+
+var resizing = false;
+moveNavigation();
+$(window).on('resize', function(){
+ if( !resizing ) {
+ 	window.requestAnimationFrame(moveNavigation);
+ 	resizing = true;
+ }
+});
+
+function moveNavigation(){
+ var mq = checkMQ(); //this function returns mobile,tablet or desktop
+
+ if ( mq == 'mobile' && topNavigation.parents('.cd-side-nav').length == 0 ) { //topNavigation = $('.cd-top-nav')
+ detachElements();
+ topNavigation.appendTo(sidebar); //sidebar = $('.cd-side-nav')
+ searchForm.prependTo(sidebar);
+ } else if ( ( mq == 'tablet' || mq == 'desktop') && topNavigation.parents('.cd-side-nav').length > 0 ) {
+ detachElements();
+ searchForm.insertAfter(header.find('.cd-logo')); //header = $('.cd-main-header')
+ topNavigation.appendTo(header.find('.cd-nav'));
+ }
+ resizing = false;
+}
+
+function detachElements() {
+ topNavigation.detach();//topNavigation = $('.cd-top-nav')
+ searchForm.detach();//searchForm = $('.cd-search')
+}
+
+//testowe koniec

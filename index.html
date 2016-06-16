@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="contact_form">
+  <div class="contact_form cd-side-nav">
     <div class="logo">
       <img src="images/logo_manager2.png">
     </div>
@@ -22,16 +22,19 @@
         <input type="text" id="datepicker" placeholder="Date (dd/mm/yy)" name="datepicker" />
     <label for="priority">Priority</label>
         <select id="priority" name="priority">
-    <option value="low">Low</option>
-    <option value="medium">Medium</option>
-    <option value="high">High</option>
+    <option class="option_low" value="low">Low</option>
+    <option class="option_medium" value="medium">Medium</option>
+    <option class="option_high" value="high">High</option>
   </select>
 
       <button class="btn">
         Add Task
       </button>
       <br>
-      <div class="counter"><h3>Total:</h3>
+      <div class="counter">
+        <h3>
+          Total:
+        </h3>
       <div class="to_do_count"><span>to do </span><span class="inner_no"></span></div>
       <div class="progress_count"><span>in progress </span><span class="inner_no"></span></div>
       </div>
