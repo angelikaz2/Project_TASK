@@ -59,14 +59,22 @@ $(this).parent().parent().find("div").slideToggle();
       }
     });
 
+    $(window).on('resize', function() {
+      if($(window).width() > 768) {
+          $(".contact_form").css("left","0");
+      } else {
+        $(".contact_form").css("left","-350px");
+      }
+    })
+
     $('#nav-trigger').change(function() {
 
-    if($(this).is(':checked')){
-    $(".contact_form").css("left","0");
-    }
-    else{
-  $(".contact_form").css("left","-350px");
-    }
+      if($(this).is(':checked')){
+        $(".contact_form").css("left","0");
+      }
+      else{
+        $(".contact_form").css("left","-350px");
+      }
 
     });
 

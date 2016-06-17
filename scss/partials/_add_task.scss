@@ -1,0 +1,56 @@
+.contact_form {
+  font-family: sans-serif;
+  padding:5px 5px 5px 5px;
+  width:20%;
+  min-width: 200px;
+  float:left;
+  background-color:#2c3136;
+  height:100vh;
+  display: inline-block;
+  color:#ffffff;
+  left:0;
+  top:0;
+  z-index: 9;
+}
+
+.contact_form_inner {
+  margin: 28% auto auto auto;
+  width:100%;
+}
+
+.option_low {
+  background-color:#3ec101;
+}
+
+.option_medium {
+  background-color:#fee600;
+}
+
+.option_high {
+  background-color:#fb3d00;
+}
+
+.inner_center {
+  text-align: left;
+}
+
+.task {
+  border-bottom:1px dotted black;
+  width:25%;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: sans-serif;
+  display: inline-block;
+  min-width:25%;
+div {
+  font-size:80%;
+  text-align: left;
+  padding:5px;
+  }
+}
+
+#name, #description, #priority, #datepicker {
+  display:block;
+  border-radius:3px;
+  margin:5px;
+}
